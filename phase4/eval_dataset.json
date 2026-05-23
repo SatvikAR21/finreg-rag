@@ -1,0 +1,82 @@
+[
+  {
+    "id": "tc001",
+    "topic": "CET1 Capital",
+    "question": "What is the minimum Common Equity Tier 1 capital ratio requirement under Basel III?",
+    "expected_keywords": ["4.5%", "Common Equity Tier 1", "minimum"],
+    "expect_refusal": false,
+    "notes": "Core Basel III requirement — must be explicitly answered with 4.5%"
+  },
+  {
+    "id": "tc002",
+    "topic": "Capital Conservation Buffer",
+    "question": "What is the capital conservation buffer and what is its size?",
+    "expected_keywords": ["2.5%", "conservation buffer", "Common Equity Tier 1"],
+    "expect_refusal": false,
+    "notes": "Buffer above minimum — must state 2.5% CET1"
+  },
+  {
+    "id": "tc003",
+    "topic": "Tier 1 Capital",
+    "question": "What is the minimum Tier 1 capital ratio under Basel III?",
+    "expected_keywords": ["6%", "Tier 1"],
+    "expect_refusal": false,
+    "notes": "Tier 1 minimum is 6% of RWA"
+  },
+  {
+    "id": "tc004",
+    "topic": "Total Capital",
+    "question": "What is the minimum total capital ratio requirement under Basel III?",
+    "expected_keywords": ["8%", "total capital"],
+    "expect_refusal": false,
+    "notes": "Total capital minimum is 8% of RWA"
+  },
+  {
+    "id": "tc005",
+    "topic": "Leverage Ratio",
+    "question": "What is the leverage ratio and why did Basel III introduce it?",
+    "expected_keywords": ["leverage", "risk-based"],
+    "expect_refusal": false,
+    "notes": "Supplement to risk-based requirements — exact ratio may not be in doc"
+  },
+  {
+    "id": "tc006",
+    "topic": "Phase-in Timeline",
+    "question": "When did the Basel III minimum capital requirements begin phasing in?",
+    "expected_keywords": ["2013", "phase"],
+    "expect_refusal": false,
+    "notes": "Phase-in started January 1 2013"
+  },
+  {
+    "id": "tc007",
+    "topic": "Countercyclical Buffer",
+    "question": "What is the countercyclical capital buffer under Basel III?",
+    "expected_keywords": ["countercyclical", "buffer"],
+    "expect_refusal": false,
+    "notes": "Countercyclical buffer protects against credit cycle excess"
+  },
+  {
+    "id": "tc008",
+    "topic": "Citation Compliance",
+    "question": "What reforms did Basel III introduce for counterparty credit risk?",
+    "expected_keywords": ["counterparty", "credit"],
+    "expect_refusal": false,
+    "notes": "Tests multi-chunk synthesis on counterparty credit reforms"
+  },
+  {
+    "id": "tc009",
+    "topic": "Refusal Test",
+    "question": "What is the current stock price of JPMorgan Chase?",
+    "expected_keywords": [],
+    "expect_refusal": true,
+    "notes": "Must refuse — stock prices are not in regulatory documents"
+  },
+  {
+    "id": "tc010",
+    "topic": "Refusal Test",
+    "question": "What is the GDPR data retention requirement for EU citizens?",
+    "expected_keywords": [],
+    "expect_refusal": true,
+    "notes": "Must refuse — GDPR is not in our Basel III document corpus"
+  }
+]

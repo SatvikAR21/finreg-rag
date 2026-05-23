@@ -1,0 +1,299 @@
+{
+  "timestamp": "2026-05-23T12:53:55.082497+00:00",
+  "system_passed": true,
+  "pass_rate": 1.0,
+  "total_cases": 10,
+  "passed_cases": 10,
+  "averages": {
+    "overall": 0.975,
+    "keyword": 0.95,
+    "citation": 1.0,
+    "refusal": 1.0,
+    "latency_ms": 2512.0
+  },
+  "results": [
+    {
+      "test_case": {
+        "id": "tc001",
+        "topic": "CET1 Capital",
+        "question": "What is the minimum Common Equity Tier 1 capital ratio requirement under Basel III?",
+        "expected_keywords": [
+          "4.5%",
+          "Common Equity Tier 1",
+          "minimum"
+        ],
+        "expect_refusal": false,
+        "notes": "Core Basel III requirement \u2014 must be explicitly answered with 4.5%"
+      },
+      "answer": "The minimum Common Equity Tier 1 capital ratio requirement under Basel III is 4.5% [1], which includes a minimum Common Equity Tier 1 requirement of 4% [1] and an additional 0.5% is not explicitly mentioned in the sources as a requirement but 4.5% is mentioned as a Tier 1 capital requirement [1], however, the 4% minimum Common Equity Tier 1 requirement is explicitly stated [1]. Additionally, the Common Equity Tier 1 ratio includes amounts used to meet the 4.5% minimum Common Equity Tier 1 requirement [2]. \n\nSources Used:\n[1] basel3_framework.pdf | Page: 28\n[2] basel3_framework.pdf | Page: 53 \n[3] basel3_framework.pdf | Page: 47",
+      "refused": false,
+      "scores": {
+        "keyword_score": 1.0,
+        "citation_score": 1.0,
+        "refusal_score": 1.0,
+        "overall_score": 1.0,
+        "passed": true,
+        "keywords_found": [
+          "4.5%",
+          "Common Equity Tier 1",
+          "minimum"
+        ],
+        "keywords_missing": []
+      },
+      "latency_ms": 4145.0,
+      "chunks_used": 3
+    },
+    {
+      "test_case": {
+        "id": "tc002",
+        "topic": "Capital Conservation Buffer",
+        "question": "What is the capital conservation buffer and what is its size?",
+        "expected_keywords": [
+          "2.5%",
+          "conservation buffer",
+          "Common Equity Tier 1"
+        ],
+        "expect_refusal": false,
+        "notes": "Buffer above minimum \u2014 must state 2.5% CET1"
+      },
+      "answer": "The capital conservation buffer is a component of the Basel III framework, and its size is 2.5% [3]. This buffer is designed to be implemented through an extension of the capital conservation buffer described in section III, with the goal of conserving capital when a bank's Common Equity Tier 1 capital ratio falls below certain thresholds [1]. The capital conservation buffer is phased in, with the division of the buffer into quartiles that determine the minimum capital conservation ratios beginning on 1 January 2016 [2]. The minimum capital conservation ratio, including the conservation buffer, is 7.0% for Common Equity Tier 1 [3]. \n\nSources Used:\n[1] basel3_framework.pdf, Page: unknown\n[2] basel3_framework.pdf, Page: unknown\n[3] basel3_framework.pdf, Page: 64",
+      "refused": false,
+      "scores": {
+        "keyword_score": 1.0,
+        "citation_score": 1.0,
+        "refusal_score": 1.0,
+        "overall_score": 1.0,
+        "passed": true,
+        "keywords_found": [
+          "2.5%",
+          "conservation buffer",
+          "Common Equity Tier 1"
+        ],
+        "keywords_missing": []
+      },
+      "latency_ms": 2233.0,
+      "chunks_used": 3
+    },
+    {
+      "test_case": {
+        "id": "tc003",
+        "topic": "Tier 1 Capital",
+        "question": "What is the minimum Tier 1 capital ratio under Basel III?",
+        "expected_keywords": [
+          "6%",
+          "Tier 1"
+        ],
+        "expect_refusal": false,
+        "notes": "Tier 1 minimum is 6% of RWA"
+      },
+      "answer": "The minimum Tier 1 capital ratio under Basel III is 6% [2], which includes the 4.5% minimum Common Equity Tier 1 requirement [1] and additional Tier 1 capital. The minimum Common Equity Tier 1 requirement will rise to 4.5% on 1 January 2013 and to 4% minimum Common Equity Tier 1 requirement and a Tier 1 capital requirement of 6% is not explicitly stated in [1] but 4% minimum Common Equity Tier 1 requirement and a Tier 1 is mentioned for January 2014 [1]. However, the 6% Tier 1 capital requirement is mentioned in [2] and [3]. \n\nSources Used:\n[1] basel3_framework.pdf | Page: 28\n[2] basel3_framework.pdf | Page: 53\n[3] basel3_framework.pdf | Page: 47",
+      "refused": false,
+      "scores": {
+        "keyword_score": 1.0,
+        "citation_score": 1.0,
+        "refusal_score": 1.0,
+        "overall_score": 1.0,
+        "passed": true,
+        "keywords_found": [
+          "6%",
+          "Tier 1"
+        ],
+        "keywords_missing": []
+      },
+      "latency_ms": 2239.0,
+      "chunks_used": 3
+    },
+    {
+      "test_case": {
+        "id": "tc004",
+        "topic": "Total Capital",
+        "question": "What is the minimum total capital ratio requirement under Basel III?",
+        "expected_keywords": [
+          "8%",
+          "total capital"
+        ],
+        "expect_refusal": false,
+        "notes": "Total capital minimum is 8% of RWA"
+      },
+      "answer": "The minimum total capital ratio requirement under Basel III is 8% [3]. This requirement is mentioned as part of the capital requirements that Common Equity Tier 1 must first be used to meet, if necessary, before the remainder can contribute to the capital conservation buffer [3]. The Tier 1 capital requirement is 4.5% as of 1 January 2013 and will rise to a 4% minimum Common Equity Tier 1 requirement and a Tier 1 requirement by 1 January 2014 [1], but the total capital ratio requirement is explicitly stated as 8% [3].\n\nSources Used:\n[1] basel3_framework.pdf, Page: 28\n[2] basel3_framework.pdf, Page: 11\n[3] basel3_framework.pdf, Page: ?",
+      "refused": false,
+      "scores": {
+        "keyword_score": 1.0,
+        "citation_score": 1.0,
+        "refusal_score": 1.0,
+        "overall_score": 1.0,
+        "passed": true,
+        "keywords_found": [
+          "8%",
+          "total capital"
+        ],
+        "keywords_missing": []
+      },
+      "latency_ms": 2264.0,
+      "chunks_used": 3
+    },
+    {
+      "test_case": {
+        "id": "tc005",
+        "topic": "Leverage Ratio",
+        "question": "What is the leverage ratio and why did Basel III introduce it?",
+        "expected_keywords": [
+          "leverage",
+          "risk-based"
+        ],
+        "expect_refusal": false,
+        "notes": "Supplement to risk-based requirements \u2014 exact ratio may not be in doc"
+      },
+      "answer": "The leverage ratio is a simple, transparent, non-risk based measure introduced by Basel III to constrain the build-up of leverage in the banking sector [1]. According to Basel III, the leverage ratio is intended to achieve two main objectives: to constrain the build-up of leverage in the banking sector and to help avoid destabilising deleveraging processes which can damage the broader financial system and the economy [1]. The introduction of the leverage ratio was a response to the build-up of excessive on- and off-balance sheet leverage in the banking system during the crisis, where banks built up excessive leverage while still showing strong risk-based capital ratios [2]. The leverage ratio is calculated in a comparable manner across jurisdictions, adjusting for any differences in accounting standards, and is designed to be a credible supplementary measure to the risk-based requirement [3].\n\nSources Used:\n[1] basel3_framework.pdf | Page: 152\n[2] basel3_framework.pdf | Page: 61\n[3] basel3_framework.pdf | Page: 17",
+      "refused": false,
+      "scores": {
+        "keyword_score": 1.0,
+        "citation_score": 1.0,
+        "refusal_score": 1.0,
+        "overall_score": 1.0,
+        "passed": true,
+        "keywords_found": [
+          "leverage",
+          "risk-based"
+        ],
+        "keywords_missing": []
+      },
+      "latency_ms": 3175.0,
+      "chunks_used": 3
+    },
+    {
+      "test_case": {
+        "id": "tc006",
+        "topic": "Phase-in Timeline",
+        "question": "When did the Basel III minimum capital requirements begin phasing in?",
+        "expected_keywords": [
+          "2013",
+          "phase"
+        ],
+        "expect_refusal": false,
+        "notes": "Phase-in started January 1 2013"
+      },
+      "answer": "The Basel III minimum capital requirements began phasing in on 1 January 2016, as the division of the buffer into quartiles that determine the minimum capital conservation ratios started on this date [2]. However, the exact start date of the minimum capital requirements phase-in is not explicitly stated in the provided sources, but it is mentioned that the capital conservation buffer is being phased in [2], implying a gradual implementation. The Basel III framework aims to improve the resilience of banks and banking systems, which had insufficient high-quality capital before the crisis [3]. The application of the minimum capital requirements follows the existing scope of application set out in Part I of the Basel II Framework [1].\n\nSources Used:\n[1] basel3_framework.pdf, Page: unknown\n[2] basel3_framework.pdf, Page: unknown\n[3] basel3_framework.pdf, Page: unknown",
+      "refused": false,
+      "scores": {
+        "keyword_score": 0.5,
+        "citation_score": 1.0,
+        "refusal_score": 1.0,
+        "overall_score": 0.75,
+        "passed": true,
+        "keywords_found": [
+          "phase"
+        ],
+        "keywords_missing": [
+          "2013"
+        ]
+      },
+      "latency_ms": 5440.0,
+      "chunks_used": 3
+    },
+    {
+      "test_case": {
+        "id": "tc007",
+        "topic": "Countercyclical Buffer",
+        "question": "What is the countercyclical capital buffer under Basel III?",
+        "expected_keywords": [
+          "countercyclical",
+          "buffer"
+        ],
+        "expect_refusal": false,
+        "notes": "Countercyclical buffer protects against credit cycle excess"
+      },
+      "answer": "The countercyclical capital buffer under Basel III is a regime that adjusts the capital buffer range to moderate excess credit growth and protect the banking system when there are signs that credit has grown to excessive levels [2]. The buffer requirement will vary between jurisdictions, and the relevant national authority will decide on its size based on the build-up of system-wide risk [1]. The countercyclical buffer range is set between 0% and 2.5% [3]. The purpose of the countercyclical buffer is to achieve the broader macroprudential goal of protecting the banking system [2].\n\nSources Used:\n[1] basel3_framework.pdf, Page: unknown\n[2] basel3_framework.pdf, Page: unknown\n[3] basel3_framework.pdf, Page: unknown",
+      "refused": false,
+      "scores": {
+        "keyword_score": 1.0,
+        "citation_score": 1.0,
+        "refusal_score": 1.0,
+        "overall_score": 1.0,
+        "passed": true,
+        "keywords_found": [
+          "countercyclical",
+          "buffer"
+        ],
+        "keywords_missing": []
+      },
+      "latency_ms": 2007.0,
+      "chunks_used": 3
+    },
+    {
+      "test_case": {
+        "id": "tc008",
+        "topic": "Citation Compliance",
+        "question": "What reforms did Basel III introduce for counterparty credit risk?",
+        "expected_keywords": [
+          "counterparty",
+          "credit"
+        ],
+        "expect_refusal": false,
+        "notes": "Tests multi-chunk synthesis on counterparty credit reforms"
+      },
+      "answer": "Basel III introduced reforms for counterparty credit risk, including requiring banks to determine their capital requirement for counterparty credit risk using stressed inputs, which will help address procyclicality [1]. This approach is similar to what has been introduced for market risk [1], [3]. Additionally, banks will be subject to a capital charge for potential mark-to-market losses (ie credit valuation adjustment \u2013 CVA \u2013 risk) associated with a deterioration in the credit worthiness of a counterparty [3]. Banks are also expected to monitor general wrong way risk by product, by region, by industry, or by other categories that are germane to the business, and provide reports to senior management [2]. \n\nSources Used:\n[1] basel3_framework.pdf | Page: unknown\n[2] basel3_framework.pdf | Page: unknown\n[3] basel3_framework.pdf | Page: unknown",
+      "refused": false,
+      "scores": {
+        "keyword_score": 1.0,
+        "citation_score": 1.0,
+        "refusal_score": 1.0,
+        "overall_score": 1.0,
+        "passed": true,
+        "keywords_found": [
+          "counterparty",
+          "credit"
+        ],
+        "keywords_missing": []
+      },
+      "latency_ms": 1916.0,
+      "chunks_used": 3
+    },
+    {
+      "test_case": {
+        "id": "tc009",
+        "topic": "Refusal Test",
+        "question": "What is the current stock price of JPMorgan Chase?",
+        "expected_keywords": [],
+        "expect_refusal": true,
+        "notes": "Must refuse \u2014 stock prices are not in regulatory documents"
+      },
+      "answer": "INSUFFICIENT SOURCE MATERIAL: No retrieved chunks met the minimum relevance threshold.",
+      "refused": true,
+      "scores": {
+        "keyword_score": 1.0,
+        "citation_score": 1.0,
+        "refusal_score": 1.0,
+        "overall_score": 1.0,
+        "passed": true,
+        "keywords_found": [],
+        "keywords_missing": []
+      },
+      "latency_ms": 869.0,
+      "chunks_used": 0
+    },
+    {
+      "test_case": {
+        "id": "tc010",
+        "topic": "Refusal Test",
+        "question": "What is the GDPR data retention requirement for EU citizens?",
+        "expected_keywords": [],
+        "expect_refusal": true,
+        "notes": "Must refuse \u2014 GDPR is not in our Basel III document corpus"
+      },
+      "answer": "INSUFFICIENT SOURCE MATERIAL: No retrieved chunks met the minimum relevance threshold.",
+      "refused": true,
+      "scores": {
+        "keyword_score": 1.0,
+        "citation_score": 1.0,
+        "refusal_score": 1.0,
+        "overall_score": 1.0,
+        "passed": true,
+        "keywords_found": [],
+        "keywords_missing": []
+      },
+      "latency_ms": 829.0,
+      "chunks_used": 0
+    }
+  ]
+}
