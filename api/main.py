@@ -35,7 +35,7 @@ from prompt_loader import get_model_config           # YAML config
 from logger import QueryLogger                       # SQLite + JSONL logger
 
 # --- IMPORT OUR DATA MODELS ---
-from api.models import (                             # all request/response shapes
+from api.models import (                             # relative import within api package
     QueryRequest, QueryResponse,
     ChunkSource, LatencyBreakdown,
     AnalyticsResponse

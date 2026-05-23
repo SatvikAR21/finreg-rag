@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FDFCF9;
+  color: #0D0D0D;
+  font-family: 'Inter', system-ui, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Minimal scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #FDFCF9; }
+::-webkit-scrollbar-thumb { background: #DDD6C8; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #C4BAA8; }
+
+/* Citation marker — small black square, very editorial */
+.citation-marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0D0D0D;
+  color: #FDFCF9;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  font-weight: 500;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 2px;
+  vertical-align: super;
+  margin: 0 2px;
+  cursor: default;
+  letter-spacing: 0;
+}
+
+/* Fade in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 0.4s ease-out forwards; }
+
+/* Subtle pulse for live indicator */
+@keyframes breathe {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+.breathe { animation: breathe 3s ease-in-out infinite; }
+
+/* Thin top border accent on cards */
+.card-accent {
+  border-top: 2px solid #0D0D0D;
+}
+
+/* Serif display class */
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
