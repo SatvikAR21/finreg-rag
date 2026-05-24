@@ -65,28 +65,27 @@ def vector_search(query, top_k=TOP_K):
     """
     Searches ChromaDB using vector similarity.
     Returns a list of dicts with 'id', 'text', 'metadata', and 'distance'.
-    We return full documents here so RRF can work with text directly,
-    without needing to map IDs back to our JSON chunks.
     """
-    global _EMBEDDING_MODEL
-    if _EMBEDDING_MODEL is None:
-    _EMBEDDING_MODEL = SentenceTransformer(EMBEDDING_MODEL)
-    query_embedding = _EMBEDDING_MODEL.encode([query]).tolist()    client = chromadb.PersistentClient(path=CHROMA_PATH)    # connect to ChromaDB
-    collection = client.get_collection(COLLECTION_NAME)     # get our collection
-    results = collection.query(                              # run similarity search
+    global _EMBEDDING_MODEL                              # access the module-level variable
+    if _EMBEDDING_MODEL is None:                         # load on first call only
+        _EMBEDDING_MODEL = SentenceTransformer(EMBEDDING_MODEL)  # load the model
+
+    query_embedding = _EMBEDDING_MODEL.encode([query]).tolist()  # embed the query
+    client = chromadb.PersistentClient(path=CHROMA_PATH)         # connect to ChromaDB
+    collection = client.get_collection(COLLECTION_NAME)          # get our collection
+    results = collection.query(                                   # run similarity search
         query_embeddings=query_embedding,
         n_results=top_k,
-        include=["documents", "metadatas", "distances"]     # get text + metadata + scores
+        include=["documents", "metadatas", "distances"]
     )
 
-    # Build a clean list of result dicts — one per retrieved chunk
-    vector_hits = []                                         # empty list to fill
-    for i in range(len(results["ids"][0])):                 # loop through each result
-        vector_hits.append({                                 # build a dict for each hit
-            "id": results["ids"][0][i],                     # the string ID like 'basel3_p64_c0'
-            "text": results["documents"][0][i],             # the actual chunk text
-            "metadata": results["metadatas"][0][i],         # page number, source, etc.
-            "distance": results["distances"][0][i]          # similarity distance score
+    vector_hits = []
+    for i in range(len(results["ids"][0])):
+        vector_hits.append({
+            "id":       results["ids"][0][i],
+            "text":     results["documents"][0][i],
+            "metadata": results["metadatas"][0][i],
+            "distance": results["distances"][0][i]
         })
     return vector_hits                                       # return list of result dicts
 
