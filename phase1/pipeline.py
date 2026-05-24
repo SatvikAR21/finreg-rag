@@ -16,11 +16,10 @@ import sys              # for path manipulation
 # --- PATH SETUP ---
 _PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, _PROJECT_ROOT)
-
-import fitz             # PyMuPDF — PDF text extraction
-from langchain_text_splitters import RecursiveCharacterTextSplitter  # chunkingimport chromadb         # vector database
-from sentence_transformers import SentenceTransformer               # embeddings
-
+import fitz                          # PyMuPDF — PDF text extraction
+from langchain_text_splitters import RecursiveCharacterTextSplitter  # chunking
+import chromadb                      # vector database
+from sentence_transformers import SentenceTransformer                # embeddings
 # --- CONFIGURATION — must match what Phase 1 used ---
 CHROMA_PATH      = os.path.join(_PROJECT_ROOT, "data", "chromadb")
 COLLECTION_NAME  = "finreg_documents"    # same collection as Phase 1
@@ -130,8 +129,7 @@ def ingest_document(pdf_path: str) -> dict:
     existing_count = collection.count()          # how many vectors already stored
 
     texts_to_embed = [c["text"] for c in all_chunks]             # extract just text
-    vectors = _MODEL.encode(texts_to_embed, show_progress_bar=True).tolist()  # embed all
-
+    vectors = _MODEL.encode(texts_to_embed, show_progress_bar=False).tolist()  # embed all
     for i, (chunk, vector) in enumerate(zip(all_chunks, vectors)):  # pair chunks + vectors
         chunk_id = f"{doc_id}_p{chunk['page']}_c{chunk['chunk_num']}_{existing_count + i}"
         ids.append(chunk_id)
