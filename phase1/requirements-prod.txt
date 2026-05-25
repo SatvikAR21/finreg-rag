@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+python-multipart
+python-dotenv
+chromadb==0.5.23
+cohere
+groq
+rank-bm25
+PyMuPDF
+langchain-text-splitters
+pyyaml
+sentence-transformers
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.2.2+cpu
+transformers
