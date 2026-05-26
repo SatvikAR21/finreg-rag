@@ -3,7 +3,12 @@ services:
     name: finreg-rag-api
     runtime: python
     pythonVersion: "3.11"
-    buildCommand: pip install --upgrade pip && pip install -r requirements-prod.txt
+    buildCommand: >
+      pip install --upgrade pip &&
+      pip install torch==2.2.2+cpu --index-url https://download.pytorch.org/whl/cpu &&
+      pip install fastapi uvicorn[standard] python-multipart python-dotenv
+      chromadb cohere groq rank-bm25 PyMuPDF langchain-text-splitters
+      pyyaml sentence-transformers transformers
     startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
